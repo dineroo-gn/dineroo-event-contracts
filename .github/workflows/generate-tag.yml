@@ -1,4 +1,4 @@
-name: Create Tag and GitHub Release
+name: Create Tag, Bump Version, and Release
 
 on:
   workflow_dispatch:
@@ -12,17 +12,32 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      contents: write # push commits + tag
+      packages: write # for completeness
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Required to create annotated tag and push
 
       - name: Set up Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Tag version
+      - name: Bump version in build.gradle.kts
+        run: |
+          sed -i 's/^version = ".*"/version = "${{ github.event.inputs.release_version }}"/' build.gradle.kts
+
+      - name: Commit version bump
+        run: |
+          git add build.gradle.kts
+          git commit -m "chore: release version ${{ github.event.inputs.release_version }}"
+          git push origin main
+
+      - name: Create Git tag
         run: |
           git tag v${{ github.event.inputs.release_version }}
           git push origin v${{ github.event.inputs.release_version }}
