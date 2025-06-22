@@ -46,8 +46,8 @@ publishing {
     publications {
         create<MavenPublication>("avroSchemas") {
             from(components["java"])
-            groupId = "com.example"
-            artifactId = "avro-schemas"
+            groupId = "com.cgf.contracts"
+            artifactId = "dineroo-event-contracts"
             version = "1.0.0"
         }
     }
