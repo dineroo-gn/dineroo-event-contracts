@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "User",
-  "namespace": "com.cgf.user.models",
+  "namespace": "com.cgf.user.contracts.models",
   "fields": [
     {"name": "id", "type": "string"},
     {"name": "telephone", "type": "string"},
