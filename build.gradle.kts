@@ -43,14 +43,6 @@ kotlin {
 
 
 publishing {
-    publications {
-        create<MavenPublication>("avroSchemas") {
-            from(components["java"])
-            groupId = "com.cgf.contracts"
-            artifactId = "dineroo-event-contracts"
-            version = "1.0.0"
-        }
-    }
     repositories {
         maven {
             name = "GitHubPackages"
@@ -59,6 +51,11 @@ publishing {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
             }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
         }
     }
 }
