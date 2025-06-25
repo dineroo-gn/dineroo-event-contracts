@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "Decision",
+  "namespace": "com.cgf.user.contracts.models",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "phone", "type": "string"},
+    {"name": "reason", "type": "string"},
+    {"name": "status", "type": "string"}
+  ]
+}
