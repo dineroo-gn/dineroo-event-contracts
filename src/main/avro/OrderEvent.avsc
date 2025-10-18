@@ -1,0 +1,46 @@
+{
+  "namespace": "com.cgf.user.contracts.models",
+  "type": "record",
+  "name": "Order",
+  "fields": [
+    {"name": "id", "type": ["null", "string"], "default": null},
+    {"name": "restaurantId", "type": {"type": "string", "logicalType": "uuid"}},
+    {"name": "totalPrice", "type": "double"},
+    {"name": "deliveryAddress", "type": "string"},
+    {
+      "name": "orderItems",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "OrderItem",
+          "fields": [
+            {"name": "id", "type": ["null", "long"], "default": null},
+            {"name": "orderId", "type": ["null", "string"], "default": null},
+            {"name": "productId", "type": ["null", {"type": "string", "logicalType": "uuid"}], "default": null},
+            {"name": "menuId", "type": ["null", {"type": "string", "logicalType": "uuid"}], "default": null},
+            {"name": "imageUrl", "type": "string"},
+            {"name": "quantity", "type": "int"},
+            {"name": "price", "type": "double"}
+          ]
+        }
+      }
+    },
+    {"name": "createdDate", "type": ["null", {"type": "long", "logicalType": "timestamp-millis"}], "default": null},
+    {"name": "lastModifiedDate", "type": ["null", {"type": "long", "logicalType": "timestamp-millis"}], "default": null},
+    {
+      "name": "status",
+      "type": ["null", {
+        "type": "enum",
+        "name": "OrderStatus",
+        "symbols": [
+          "CREATED", "PENDING_PAYMENT", "PAYMENT_CONFIRMED", "ACCEPTED",
+          "REJECTED", "PREPARING", "READY_FOR_PICKUP", "COMPLETED", "CANCELLED"
+        ]
+      }],
+      "default": null
+    },
+    {"name": "customerId", "type": {"type": "string", "logicalType": "uuid"}},
+    {"name": "comment", "type": ["null", "string"], "default": null}
+  ]
+}
