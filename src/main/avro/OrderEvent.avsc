@@ -1,5 +1,5 @@
 {
-  "namespace": "com.cgf.user.contracts.models",
+  "namespace": "com.cgf.order.contracts.models",
   "type": "record",
   "name": "Order",
   "fields": [
