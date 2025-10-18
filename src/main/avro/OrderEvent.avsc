@@ -1,7 +1,7 @@
 {
   "namespace": "com.cgf.order.contracts.models",
   "type": "record",
-  "name": "Order",
+  "name": "OrderEvent",
   "fields": [
     {"name": "id", "type": ["null", "string"], "default": null},
     {"name": "restaurantId", "type": {"type": "string", "logicalType": "uuid"}},
@@ -13,7 +13,7 @@
         "type": "array",
         "items": {
           "type": "record",
-          "name": "OrderItem",
+          "name": "OrderItemEvent",
           "fields": [
             {"name": "id", "type": ["null", "long"], "default": null},
             {"name": "orderId", "type": ["null", "string"], "default": null},
