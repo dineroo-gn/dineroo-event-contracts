@@ -1,0 +1,29 @@
+{
+  "namespace": "com.cgf.order.contracts.models",
+  "type": "record",
+  "name": "OrderCreatedEvent",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "restaurantId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    }
+  ]
+}
