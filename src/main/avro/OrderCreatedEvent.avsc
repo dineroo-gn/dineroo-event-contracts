@@ -24,6 +24,28 @@
         "type": "string",
         "logicalType": "uuid"
       }
+    },
+    {
+      "name": "status",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "OrderStatus",
+          "symbols": [
+            "CREATED",
+            "PENDING_PAYMENT",
+            "PAYMENT_CONFIRMED",
+            "ACCEPTED",
+            "REJECTED",
+            "PREPARING",
+            "READY_FOR_PICKUP",
+            "COMPLETED",
+            "CANCELLED"
+          ]
+        }
+      ],
+      "default": null
     }
   ]
 }
