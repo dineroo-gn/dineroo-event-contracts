@@ -35,7 +35,7 @@
         "name": "OrderStatus",
         "symbols": [
           "CREATED", "PENDING_PAYMENT", "PAYMENT_CONFIRMED", "ACCEPTED",
-          "REJECTED", "PREPARING", "READY_FOR_PICKUP", "COMPLETED", "CANCELLED"
+          "REJECTED", "PREPARING", "READY_FOR_PICKUP", "COMPLETED", "CANCELED"
         ]
       }],
       "default": null
