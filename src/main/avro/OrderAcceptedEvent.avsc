@@ -1,0 +1,37 @@
+{
+  "namespace": "com.cgf.order.contracts.models",
+  "type": "record",
+  "name": "OrderAcceptedEvent",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "status",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "OrderStatus",
+          "symbols": [
+            "CREATED",
+            "PENDING_PAYMENT",
+            "PAYMENT_CONFIRMED",
+            "ACCEPTED",
+            "REJECTED",
+            "PREPARING",
+            "READY_FOR_PICKUP",
+            "COMPLETED",
+            "CANCELLED"
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
