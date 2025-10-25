@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.cgf.contracts"
-version = "1.14.0"
+version = "1.5.0"
 
 
 java {
