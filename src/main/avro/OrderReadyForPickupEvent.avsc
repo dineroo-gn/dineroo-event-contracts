@@ -22,6 +22,7 @@
             "CREATED",
             "PENDING_PAYMENT",
             "PAYMENT_CONFIRMED",
+            "PAYMENT_FAILED",
             "ACCEPTED",
             "REJECTED",
             "PREPARING",
