@@ -34,7 +34,7 @@
         "type": "enum",
         "name": "OrderStatus",
         "symbols": [
-          "CREATED", "PENDING_PAYMENT", "PAYMENT_CONFIRMED", "ACCEPTED",
+          "CREATED", "PENDING_PAYMENT", "PAYMENT_CONFIRMED", "PAYMENT_FAILED", "ACCEPTED",
           "REJECTED", "PREPARING", "READY_FOR_PICKUP", "COMPLETED", "CANCELED"
         ]
       }],
