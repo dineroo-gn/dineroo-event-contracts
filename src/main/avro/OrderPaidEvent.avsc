@@ -1,0 +1,52 @@
+{
+  "namespace": "com.cgf.order.contracts.models",
+  "type": "record",
+  "name": "OrderPaidEvent",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "restaurantId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "status",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "OrderStatus",
+          "symbols": [
+            "CREATED",
+            "PENDING_PAYMENT",
+            "PAYMENT_CONFIRMED",
+            "PAYMENT_FAILED",
+            "ACCEPTED",
+            "REJECTED",
+            "PREPARING",
+            "READY_FOR_PICKUP",
+            "COMPLETED",
+            "CANCELED"
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
