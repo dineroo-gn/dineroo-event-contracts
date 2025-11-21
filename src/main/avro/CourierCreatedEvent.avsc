@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "CourierCreatedEvent",
+  "namespace": "com.cgf.user.contracts.models",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "telephone",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    }
+  ]
+}
