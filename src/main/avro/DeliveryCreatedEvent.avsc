@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "DeliveryCreatedEvent",
+  "namespace": "com.cgf.order.contracts.models",
+  "fields": [
+    {
+      "name": "deliveryId",
+      "type": "string"
+    },
+    {
+      "name": "restaurantName",
+      "type": "string"
+    },
+    {
+      "name": "pickupAddress",
+      "type": "string"
+    },
+    {
+      "name": "deliveryAddress",
+      "type": "string"
+    },
+    {
+      "name": "estimatedDeliveryDistance",
+      "type": "double"
+    },
+    {
+      "name": "deliveryFee",
+      "type": "double"
+    }
+  ]
+}
