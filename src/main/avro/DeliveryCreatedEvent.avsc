@@ -26,6 +26,13 @@
     {
       "name": "deliveryFee",
       "type": "double"
+    },
+    {
+      "name": "driverIds",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
     }
   ]
 }
