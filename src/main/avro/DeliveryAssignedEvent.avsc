@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "DeliveryAssignedEvent",
+  "namespace": "com.cgf.order.contracts.models",
+  "fields": [
+    {
+      "name": "deliveryId",
+      "type": "string"
+    },
+    {
+      "name": "orderId",
+      "type": "string"
+    }
+  ]
+}
