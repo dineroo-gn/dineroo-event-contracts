@@ -1,7 +1,7 @@
 {
   "namespace": "com.cgf.order.contracts.models",
   "type": "record",
-  "name": "OrderRejectedEvent",
+  "name": "OrderPickedUpEvent",
   "fields": [
     {
       "name": "orderId",
@@ -10,6 +10,20 @@
         "string"
       ],
       "default": null
+    },
+    {
+      "name": "driverId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "deliveryId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
     },
     {
       "name": "status",
