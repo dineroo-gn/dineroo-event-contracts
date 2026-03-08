@@ -24,13 +24,6 @@
         "type": "string",
         "logicalType": "uuid"
       }
-    },
-    {
-      "name": "deliveryId",
-      "type": {
-        "type": "string",
-        "logicalType": "uuid"
-      }
     }
   ]
 }
