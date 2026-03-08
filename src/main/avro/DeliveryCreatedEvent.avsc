@@ -33,6 +33,20 @@
         "type": "array",
         "items": "string"
       }
+    },
+    {
+      "name": "restaurantId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
     }
   ]
 }

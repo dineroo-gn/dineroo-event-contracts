@@ -10,6 +10,27 @@
     {
       "name": "orderId",
       "type": "string"
+    },
+    {
+      "name": "restaurantId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "deliveryId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
     }
   ]
 }
