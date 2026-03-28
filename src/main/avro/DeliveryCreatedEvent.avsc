@@ -47,6 +47,13 @@
         "type": "string",
         "logicalType": "uuid"
       }
+    },
+    {
+      "name": "orderId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
     }
   ]
 }
