@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "name": "DeliveryCreatedEvent",
+  "name": "DriverLocationsUpdatedEvent",
   "namespace": "com.cgf.driver.contracts.models",
   "fields": [
     {
