@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "DeliveryCreatedEvent",
+  "namespace": "com.cgf.driver.contracts.models",
+  "fields": [
+    {
+      "name": "driverId",
+      "type": "string"
+    },
+    {
+      "name": "latitude",
+      "type": "double"
+    },
+    {
+      "name": "longitude",
+      "type": "double"
+    }
+  ]
+}
