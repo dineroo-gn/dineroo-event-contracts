@@ -50,10 +50,7 @@
     },
     {
       "name": "orderId",
-      "type": {
-        "type": "string",
-        "logicalType": "uuid"
-      }
+      "type": "string"
     }
   ]
 }
