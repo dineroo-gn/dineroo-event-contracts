@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "ValidationCodeRequested",
+  "namespace": "com.cgf.user.contracts.models",
+  "fields": [
+    {"name": "code", "type": "int"},
+    {"name": "phoneNumber", "type": "string"}
+  ]
+}
