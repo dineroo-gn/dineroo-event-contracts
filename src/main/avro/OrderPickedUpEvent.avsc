@@ -12,13 +12,6 @@
       "default": null
     },
     {
-      "name": "driverId",
-      "type": {
-        "type": "string",
-        "logicalType": "uuid"
-      }
-    },
-    {
       "name": "restaurantId",
       "type": {
         "type": "string",
@@ -27,13 +20,6 @@
     },
     {
       "name": "customerId",
-      "type": {
-        "type": "string",
-        "logicalType": "uuid"
-      }
-    },
-    {
-      "name": "deliveryId",
       "type": {
         "type": "string",
         "logicalType": "uuid"
