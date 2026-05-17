@@ -24,6 +24,17 @@
         "type": "string",
         "logicalType": "uuid"
       }
+    },
+    {
+      "name": "driverId",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "logicalType": "uuid"
+        }
+      ],
+      "default": null
     }
   ]
 }
