@@ -1,0 +1,40 @@
+{
+  "namespace": "com.cgf.restaurant.contracts.models",
+  "type": "record",
+  "name": "RestaurantItemAvailabilityUpdatedEvent",
+  "fields": [
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "restaurantId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "entityType",
+      "type": "string"
+    },
+    {
+      "name": "entityId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "available",
+      "type": "boolean"
+    },
+    {
+      "name": "occurredAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
