@@ -26,6 +26,14 @@
       }
     },
     {
+      "name": "deliveryFee",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
+    },
+    {
       "name": "status",
       "type": [
         "null",
