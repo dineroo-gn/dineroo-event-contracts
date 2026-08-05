@@ -1,0 +1,40 @@
+{
+  "type": "record",
+  "name": "DeliveryCancelledEvent",
+  "namespace": "com.cgf.order.contracts.models",
+  "fields": [
+    {
+      "name": "deliveryId",
+      "type": "string"
+    },
+    {
+      "name": "orderId",
+      "type": "string"
+    },
+    {
+      "name": "restaurantId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "driverId",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "logicalType": "uuid"
+        }
+      ],
+      "default": null
+    }
+  ]
+}
