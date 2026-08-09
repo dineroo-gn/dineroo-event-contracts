@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "UserDeactivatedEvent",
+  "namespace": "com.cgf.user.contracts.models",
+  "doc": "Emitted by user-service when an account is deactivated. Consumers (gateway-service) reject any access token issued at or before invalidatedAt for this user.",
+  "fields": [
+    {
+      "name": "userId",
+      "type": "string",
+      "doc": "Keycloak user id (JWT 'sub')."
+    },
+    {
+      "name": "invalidatedAt",
+      "type": "long",
+      "doc": "Epoch millis. Access tokens whose 'iat' is at or before this instant are revoked."
+    }
+  ]
+}
