@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "RestaurantReinstatedEvent",
+  "namespace": "com.cgf.restaurant.contracts.models",
+  "doc": "Emitted by user-service when a suspension is lifted. Consumers restore full visibility and write access.",
+  "fields": [
+    {
+      "name": "restaurantId",
+      "type": "string",
+      "doc": "Organization id, which is also the restaurant id in restaurant-service."
+    },
+    {
+      "name": "reinstatedAt",
+      "type": "long",
+      "doc": "Epoch millis."
+    },
+    {
+      "name": "reinstatedBy",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "Keycloak user id (JWT 'sub') of the support agent."
+    }
+  ]
+}

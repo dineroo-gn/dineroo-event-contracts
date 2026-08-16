@@ -1,0 +1,52 @@
+{
+  "type": "record",
+  "name": "RestaurantSuspendedEvent",
+  "namespace": "com.cgf.restaurant.contracts.models",
+  "doc": "Emitted by user-service when the platform suspends a restaurant (organization). Consumers hide the restaurant from customers and reject staff write operations until a RestaurantReinstatedEvent arrives.",
+  "fields": [
+    {
+      "name": "restaurantId",
+      "type": "string",
+      "doc": "Organization id, which is also the restaurant id in restaurant-service."
+    },
+    {
+      "name": "reason",
+      "type": {
+        "type": "enum",
+        "name": "SuspensionReason",
+        "symbols": [
+          "SERVICE_QUALITY",
+          "INCOMPLETE_ORDERS",
+          "EXCESSIVE_PREPARATION_TIME",
+          "UNRESPONSIVE_TO_ORDERS",
+          "CONTRACT_BREACH",
+          "OTHER"
+        ]
+      },
+      "doc": "Operational reason for the suspension."
+    },
+    {
+      "name": "note",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "Support-internal free text. Mandatory when reason is OTHER. Never exposed to customers or to restaurant staff."
+    },
+    {
+      "name": "suspendedAt",
+      "type": "long",
+      "doc": "Epoch millis."
+    },
+    {
+      "name": "suspendedBy",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "Keycloak user id (JWT 'sub') of the support agent."
+    }
+  ]
+}
