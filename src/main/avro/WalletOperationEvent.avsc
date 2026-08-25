@@ -1,0 +1,35 @@
+{
+  "namespace": "com.cgf.payment.contracts.models",
+  "type": "record",
+  "name": "WalletOperationEvent",
+  "fields": [
+    {
+      "name": "customerId",
+      "type": "string"
+    },
+    {
+      "name": "amount",
+      "type": "double"
+    },
+    {
+      "name": "currency",
+      "type": "string"
+    },
+    {
+      "name": "balance",
+      "type": "double"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "reference",
+      "type": "string"
+    },
+    {
+      "name": "reason",
+      "type": "string"
+    }
+  ]
+}
