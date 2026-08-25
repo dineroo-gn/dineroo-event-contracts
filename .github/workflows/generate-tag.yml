@@ -33,14 +33,22 @@ jobs:
 
       - name: Commit version bump
         run: |
-          git add build.gradle.kts
-          git commit -m "chore: release version ${{ github.event.inputs.release_version }}"
-          git push origin master
+          if git diff --quiet -- build.gradle.kts; then
+            echo "build.gradle.kts already uses version ${{ github.event.inputs.release_version }}"
+          else
+            git add build.gradle.kts
+            git commit -m "chore: release version ${{ github.event.inputs.release_version }}"
+            git push origin master
+          fi
 
       - name: Create Git tag
         run: |
-          git tag v${{ github.event.inputs.release_version }}
-          git push origin v${{ github.event.inputs.release_version }}
+          if git rev-parse "v${{ github.event.inputs.release_version }}" >/dev/null 2>&1; then
+            echo "Tag v${{ github.event.inputs.release_version }} already exists"
+          else
+            git tag v${{ github.event.inputs.release_version }}
+            git push origin v${{ github.event.inputs.release_version }}
+          fi
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
