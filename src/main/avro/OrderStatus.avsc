@@ -1,0 +1,22 @@
+{
+  "type": "enum",
+  "name": "OrderStatus",
+  "namespace": "com.cgf.order.contracts.models",
+  "doc": "Lifecycle status of an order. UNKNOWN is a reader-side fallback for a symbol the reader's contract version does not know yet: producers must never emit it. A new symbol may only be emitted once every consumer runs a contracts version that carries this default.",
+  "symbols": [
+    "CREATED",
+    "PENDING_PAYMENT",
+    "PAYMENT_CONFIRMED",
+    "PAYMENT_FAILED",
+    "ACCEPTED",
+    "REJECTED",
+    "PREPARING",
+    "READY_FOR_PICKUP",
+    "PICKED_UP",
+    "DELIVERED",
+    "COMPLETED",
+    "CANCELED",
+    "UNKNOWN"
+  ],
+  "default": "UNKNOWN"
+}

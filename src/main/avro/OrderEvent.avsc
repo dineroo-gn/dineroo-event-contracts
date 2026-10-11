@@ -30,14 +30,7 @@
     {"name": "lastModifiedDate", "type": ["null", {"type": "long", "logicalType": "timestamp-millis"}], "default": null},
     {
       "name": "status",
-      "type": ["null", {
-        "type": "enum",
-        "name": "OrderStatus",
-        "symbols": [
-          "CREATED", "PENDING_PAYMENT", "PAYMENT_CONFIRMED", "PAYMENT_FAILED", "ACCEPTED",
-          "REJECTED", "PREPARING", "READY_FOR_PICKUP", "PICKED_UP", "DELIVERED", "COMPLETED", "CANCELED"
-        ]
-      }],
+      "type": ["null", "OrderStatus"],
       "default": null
     },
     {"name": "customerId", "type": {"type": "string", "logicalType": "uuid"}},
